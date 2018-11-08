@@ -1,9 +1,14 @@
 import React from 'react';
-import './App.css';
+
+import Header from './containers/Header';
+import Main from './containers/Main';
+import Footer from './containers/Footer';
 
 const App = () => (
   <div>
-    <p>Hola Mundo</p>
+    <Header />
+    <Main />
+    <Footer />
   </div>
 );
 

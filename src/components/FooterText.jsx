@@ -1,9 +1,5 @@
 import React from 'react';
 
-const FooterTextComponent = () => (
-  <div>
-    <p>Hola Mundo</p>
-  </div>
-);
+const FooterText = () => <p>FooterText.jsx</p>;
 
-export default FooterTextComponent;
+export default FooterText;
