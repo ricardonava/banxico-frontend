@@ -7,11 +7,9 @@ import Header from './containers/Header';
 import Main from './containers/Main';
 import Footer from './containers/Footer';
 
-const styles = theme => ({
+const styles = () => ({
   layout: {
     width: 'auto',
-    marginLeft: theme.spacing.unit * 3,
-    marginRight: theme.spacing.unit * 3,
   },
 });
 
@@ -28,7 +26,7 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.shape().isRequired,
 };
 
 export default withStyles(styles)(App);

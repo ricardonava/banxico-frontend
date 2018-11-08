@@ -1,34 +1,37 @@
 import React from 'react';
-// import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+import PropTypes from 'prop-types';
+
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 
 import HeaderLogo from '../components/HeaderLogo';
-import CurrencyInput from '../components/CurrencyInput';
 
-// const Header = () => (
-//   <header>
-//     <HeaderLogo />
-//     <CurrencyInput />
-//   </header>
-// );
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  header: {
+    backgroundColor: theme.palette.background.paper,
+  },
+});
 
-// const styles = theme => ({
-//   root: {
-//     flexGrow: 1,
-//   },
-// });
+const Header = (props) => {
+  const { classes } = props;
 
-const Header = () => (
-  <header>
-    <Grid container direction="column">
-      <Grid item>
-        <HeaderLogo />
-      </Grid>
-      <Grid item>
-        <CurrencyInput />
-      </Grid>
-    </Grid>
-  </header>
-);
+  return (
+    <header className={classes.root}>
+      <AppBar position="relative" className={classes.header}>
+        <Toolbar>
+          <HeaderLogo />
+        </Toolbar>
+      </AppBar>
+    </header>
+  );
+};
 
-export default Header;
+Header.propTypes = {
+  classes: PropTypes.shape().isRequired,
+};
+
+export default withStyles(styles)(Header);
