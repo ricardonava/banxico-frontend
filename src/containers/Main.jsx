@@ -7,7 +7,7 @@ import CurrencyCard from '../components/CurrencyCard';
 
 const styles = theme => ({
   main: {
-    marginLeft: theme.spacing.unit * 3,
+    margin: theme.spacing.unit * 3,
   },
 });
 
