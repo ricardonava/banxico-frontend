@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 
 import CurrencyCard from '../components/CurrencyCard';
@@ -16,7 +17,13 @@ const Main = (props) => {
 
   return (
     <main className={classes.main}>
-      <CurrencyCard />
+      <Grid container spacing={16} justify="center">
+        {[1, 2, 3, 4, 5, 6].map(() => (
+          <Grid item xs={12} sm={6} md={4} lg={4}>
+            <CurrencyCard />
+          </Grid>
+        ))}
+      </Grid>
     </main>
   );
 };
