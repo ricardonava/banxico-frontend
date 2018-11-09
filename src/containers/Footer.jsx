@@ -6,13 +6,13 @@ import { withStyles } from '@material-ui/core/styles';
 import FooterText from '../components/FooterText';
 
 const styles = theme => ({
-  root: {
-    flexGrow: 1,
-  },
   footer: {
     backgroundColor: theme.palette.background.paper,
     marginTop: theme.spacing.unit * 8,
     padding: `${theme.spacing.unit * 6}px 0`,
+  },
+  footerText: {
+    marginLeft: theme.spacing.unit * 3,
   },
 });
 
@@ -20,11 +20,11 @@ const Footer = (props) => {
   const { classes } = props;
 
   return (
-    <div className={classes.root}>
-      <footer className={classes.footer}>
+    <footer className={classes.footer}>
+      <div className={classes.footerText}>
         <FooterText />
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 };
 
