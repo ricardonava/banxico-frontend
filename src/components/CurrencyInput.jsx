@@ -7,7 +7,7 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   root: {
     // display: 'flex',
-    // justifyContent: 'center',
+    justifyContent: 'center',
     marginBottom: theme.spacing.unit * 1,
     backgroundColor: 'white',
   },
@@ -16,25 +16,24 @@ const styles = theme => ({
   },
 });
 
-const CurrencyInput = (props) => {
-  const { classes } = props;
-  return (
-    <div className={classes.root}>
-      <TextField
-        id="standard-number"
-        label="MXN"
-        value=""
-        // onChange={this.handleChange('age')}
-        type="number"
-        className={classes.textField}
-        variant="outlined"
-      />
-    </div>
-  );
-};
+const CurrencyInput = ({
+  classes, type, label, onChange,
+}) => (
+  <div className={classes.root}>
+    <TextField
+      type={type}
+      label={label}
+      onChange={onChange}
+      className={classes.textField}
+      variant="outlined"
+    />
+  </div>
+);
 
 CurrencyInput.propTypes = {
   classes: PropTypes.shape().isRequired,
+  type: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
 };
 
 export default withStyles(styles)(CurrencyInput);
