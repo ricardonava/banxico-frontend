@@ -7,8 +7,8 @@ import FooterText from '../components/FooterText';
 
 const styles = theme => ({
   footer: {
-    backgroundColor: '#282a2b',
-    padding: `${theme.spacing.unit * 6}px 0`,
+    // backgroundColor: '#282a2b',
+    // padding: `${theme.spacing.unit * 6}px 0`,
     borderTopStyle: 'solid',
     borderTopColor: '#CE1126',
     borderTopWidth: '8px',

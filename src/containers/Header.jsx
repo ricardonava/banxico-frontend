@@ -8,9 +8,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import HeaderLogo from '../components/HeaderLogo';
 
 const styles = () => ({
-  root: {
-    flexGrow: 1,
-  },
+  // root: {
+  //   flexGrow: 1,
+  // },
   header: {
     backgroundColor: '#282a2b',
     borderBottomStyle: 'solid',

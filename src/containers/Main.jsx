@@ -16,8 +16,7 @@ const styles = theme => ({
   },
   main: {
     width: '960px',
-    padding: theme.spacing.unit * 3,
-    paddingBottom: theme.spacing.unit * 6,
+    margin: theme.spacing.unit * 3,
   },
 });
 
