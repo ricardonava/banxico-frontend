@@ -8,9 +8,16 @@ import CurrencyInput from '../components/CurrencyInput';
 import CurrencyCard from '../components/CurrencyCard';
 
 const styles = theme => ({
-  main: {
+  root: {
+    backgroundColor: '#f4f7f6',
     width: 'auto',
-    margin: theme.spacing.unit * 3,
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  main: {
+    width: '960px',
+    padding: theme.spacing.unit * 3,
+    paddingBottom: theme.spacing.unit * 6,
   },
 });
 
@@ -18,16 +25,18 @@ const Main = (props) => {
   const { classes } = props;
 
   return (
-    <main className={classes.main}>
-      <CurrencyInput />
-      <Grid container spacing={16} justify="center">
-        {[1, 2, 3, 4, 5, 6].map(() => (
-          <Grid item xs={12} sm={6} md={4} lg={4}>
-            <CurrencyCard />
-          </Grid>
-        ))}
-      </Grid>
-    </main>
+    <div className={classes.root}>
+      <main className={classes.main}>
+        <CurrencyInput />
+        <Grid container spacing={8} justify="center">
+          {[1, 2, 3, 4, 5, 6].map(() => (
+            <Grid item xs={12} sm={6} md={4} lg={4}>
+              <CurrencyCard />
+            </Grid>
+          ))}
+        </Grid>
+      </main>
+    </div>
   );
 };
 

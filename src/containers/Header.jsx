@@ -7,12 +7,16 @@ import Toolbar from '@material-ui/core/Toolbar';
 
 import HeaderLogo from '../components/HeaderLogo';
 
-const styles = theme => ({
+const styles = () => ({
   root: {
     flexGrow: 1,
   },
   header: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: '#282a2b',
+    borderBottomStyle: 'solid',
+    borderBottomColor: '#006847',
+    borderBottomWidth: '8px',
+    boxShadow: 'none',
   },
 });
 

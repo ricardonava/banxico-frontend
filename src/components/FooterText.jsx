@@ -1,5 +1,5 @@
 import React from 'react';
 
-const FooterText = () => <p>FooterText.jsx</p>;
+const FooterText = () => <p style={{ color: '#fff' }}>FooterText.jsx</p>;
 
 export default FooterText;

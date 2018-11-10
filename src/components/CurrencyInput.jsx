@@ -4,13 +4,15 @@ import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = () => ({
+const styles = theme => ({
   root: {
     display: 'flex',
     justifyContent: 'center',
+    marginBottom: theme.spacing.unit * 1,
+    backgroundColor: 'white',
   },
   textField: {
-    width: 960,
+    width: '100%',
   },
 });
 
@@ -21,14 +23,11 @@ const CurrencyInput = (props) => {
       <TextField
         id="standard-number"
         label="MXN"
-        value={100.5}
+        value=""
         // onChange={this.handleChange('age')}
         type="number"
         className={classes.textField}
-        InputLabelProps={{
-          shrink: true,
-        }}
-        margin="normal"
+        variant="outlined"
       />
     </div>
   );
