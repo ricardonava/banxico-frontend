@@ -21,25 +21,6 @@ const styles = theme => ({
   },
 });
 
-// const Main = (props) => {
-//   const { classes } = props;
-
-//   return (
-//     <div className={classes.root}>
-//       <main className={classes.main}>
-//         <CurrencyInput type="number" label="MXN" />
-//         <Grid container spacing={8} justify="center">
-//           {[1, 2, 3, 4, 5, 6].map(() => (
-//             <Grid item xs={12} sm={6} md={4} lg={4}>
-//               <CurrencyCard />
-//             </Grid>
-//           ))}
-//         </Grid>
-//       </main>
-//     </div>
-//   );
-// };
-
 class Main extends Component {
   constructor(props) {
     super(props);
@@ -87,7 +68,7 @@ class Main extends Component {
     return (
       <div className={classes.root}>
         <main className={classes.main}>
-          <CurrencyInput onChange={this.handleCurrencyInput} type={'number'} />
+          <CurrencyInput onChange={this.handleCurrencyInput} type={'number'} label={'MXN'} />
           <Grid container spacing={8} justify="center">
             {axiosCurrencies.map(currency => (
               <Grid item xs={12} sm={6} md={4} lg={4}>

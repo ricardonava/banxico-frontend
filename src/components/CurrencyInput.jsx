@@ -6,8 +6,6 @@ import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
   root: {
-    // display: 'flex',
-    justifyContent: 'center',
     marginBottom: theme.spacing.unit * 1,
     backgroundColor: 'white',
   },
@@ -34,6 +32,7 @@ CurrencyInput.propTypes = {
   classes: PropTypes.shape().isRequired,
   type: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(CurrencyInput);

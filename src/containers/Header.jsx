@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 
 import HeaderLogo from '../components/HeaderLogo';
@@ -15,8 +14,7 @@ const styles = () => ({
     backgroundColor: '#282a2b',
     borderBottomStyle: 'solid',
     borderBottomColor: '#006847',
-    borderBottomWidth: '8px',
-    boxShadow: 'none',
+    borderBottomWidth: '5px',
   },
 });
 
@@ -24,12 +22,10 @@ const Header = (props) => {
   const { classes } = props;
 
   return (
-    <header className={classes.root}>
-      <AppBar position="relative" className={classes.header}>
-        <Toolbar>
-          <HeaderLogo />
-        </Toolbar>
-      </AppBar>
+    <header className={classes.header}>
+      <Toolbar>
+        <HeaderLogo />
+      </Toolbar>
     </header>
   );
 };

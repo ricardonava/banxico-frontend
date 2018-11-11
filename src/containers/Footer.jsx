@@ -2,19 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { withStyles } from '@material-ui/core/styles';
+import Toolbar from '@material-ui/core/Toolbar';
 
 import FooterText from '../components/FooterText';
 
-const styles = theme => ({
+const styles = () => ({
   footer: {
-    // backgroundColor: '#282a2b',
-    // padding: `${theme.spacing.unit * 6}px 0`,
     borderTopStyle: 'solid',
     borderTopColor: '#CE1126',
-    borderTopWidth: '8px',
-  },
-  footerText: {
-    marginLeft: theme.spacing.unit * 3,
+    borderTopWidth: '5px',
   },
 });
 
@@ -23,9 +19,9 @@ const Footer = (props) => {
 
   return (
     <footer className={classes.footer}>
-      <div className={classes.footerText}>
+      <Toolbar>
         <FooterText />
-      </div>
+      </Toolbar>
     </footer>
   );
 };
