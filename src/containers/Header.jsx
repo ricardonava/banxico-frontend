@@ -7,10 +7,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import HeaderLogo from '../components/HeaderLogo';
 
 const styles = () => ({
-  // root: {
-  //   flexGrow: 1,
-  // },
-  header: {
+  root: {
     backgroundColor: '#282a2b',
     borderBottomStyle: 'solid',
     borderBottomColor: '#006847',
@@ -22,7 +19,7 @@ const Header = (props) => {
   const { classes } = props;
 
   return (
-    <header className={classes.header}>
+    <header className={classes.root}>
       <Toolbar>
         <HeaderLogo />
       </Toolbar>

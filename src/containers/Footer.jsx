@@ -7,10 +7,13 @@ import Toolbar from '@material-ui/core/Toolbar';
 import FooterText from '../components/FooterText';
 
 const styles = () => ({
-  footer: {
+  root: {
     borderTopStyle: 'solid',
     borderTopColor: '#CE1126',
     borderTopWidth: '5px',
+    width: 'auto',
+    display: 'flex',
+    justifyContent: 'flex-end',
   },
 });
 
@@ -18,7 +21,7 @@ const Footer = (props) => {
   const { classes } = props;
 
   return (
-    <footer className={classes.footer}>
+    <footer className={classes.root}>
       <Toolbar>
         <FooterText />
       </Toolbar>
